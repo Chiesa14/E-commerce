@@ -4,11 +4,6 @@ import { Ionicons, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 import { COLORS, SIZES } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import "react-native-gesture-handler";
-import {
-  BottomSheetModal,
-  BottomSheetModalProvider,
-} from "@gorhom/bottom-sheet";
-
 const LogedUser = () => {
   const handlePressModel = () => {
     console.warn("Clicked");
