@@ -1,11 +1,11 @@
 import express, { json, urlencoded } from "express";
-const app = express();
 import cors from "cors";
 import { config } from "dotenv";
 import { connect } from "mongoose";
 import productRouter from "./routes/products.js";
 import userRouter from "./routes/user.js";
 const port = 3011;
+const app = express();
 
 config();
 
@@ -19,6 +19,4 @@ app.use(urlencoded({ limit: "10mb", extended: true }));
 
 app.use("/api/products", productRouter);
 app.use("/api/users", userRouter);
-app.listen(process.env.PORT || port, () =>
-  console.log(`Example app listening on port ${process.env.PORT || port}!`)
-);
+app.listen(process.env.PORT || port, () => {});
